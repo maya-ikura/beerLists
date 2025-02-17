@@ -1,0 +1,33 @@
+/* ボックス外の背景色を設定 */
+body {
+    background-color:#E6E4E0; /* 背景色を設定 */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 150px;  /*ヘッダーの高さ分だけ余白を確保  */
+
+}
+
+
+/* 親要素にフレックスボックスを適用 */
+.background {
+    display: flex;
+    justify-content: center; /* 横方向に中央揃え */
+    align-items: center; /* 縦方向に中央揃え */
+    min-height: 100vh; /* 画面の高さ全体を使用 */
+    padding: 20px;
+}
+
+/* メインコンテンツのボックスのスタイル */
+.content-box {
+    background-color: white; /* ボックスの背景色を白に設定 */
+    padding: 20px;
+    max-width: 1000px; /* ボックスの最大幅を設定 */
+    width: 100%;
+    box-sizing: border-box; /* ボックス内の余白やパディングを幅に含める */
+    margin: 0 auto; /* 横方向に中央揃え */
+    text-align: center;   
+}
+
+/* テキストやその他のスタイル */
+

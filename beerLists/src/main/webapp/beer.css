@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* 見出し　*/
+.heading-4 {
+	width: 70%;
+    padding:0 .4em .2em;
+    border-bottom: 3px dashed #446E72;
+    color: #2B2721;
+    
+  /* フォームを中央に配置する */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+/* フォーム */
+
+/* テキストボックス */
+
+.cp_iptxt {
+  position: relative;
+  width: 70%;
+  margin-bottom: 10px;
+
+  /* フォームを中央に配置する */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.cp_iptxt input[type='text'] {
+  font: 15px/1.6 sans-serif;
+  width: 70%;
+  padding: 0.3em;
+  color: rgb(150, 137, 118);
+  border: none;
+  border-bottom: 2px solid #2B2721;
+  background: transparent;
+  transition: 0.3s;
+}
+.cp_iptxt .ef input[type='text']:focus {
+  border-bottom: 2px solid #446E72;
+  outline: none;
+}
+
+/* テキストボックス2 */
+
+.input-checkbox-wrapper {
+  display: flex; /* テキストボックスとチェックボックスを横並びにする */
+  align-items: center; /* 縦方向を中央揃えにする */
+  gap: 40px; /* テキストボックスとチェックボックスの間にスペースを追加 */
+  width: 50%;
+  margin-bottom: 30px;
+
+  
+  /* フォームを中央に配置する */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cp_iptxt2 {
+  position: relative;
+  width: 50%;
+/*  margin-bottom: 10px;*/
+
+}
+
+.cp_iptxt2 input[type='text'] {
+  font: 15px/1.6 sans-serif;
+  width: 100%;
+  padding:5px;
+  color: rgb(150, 137, 118);
+  border: none;
+  border-bottom: 2px solid #2B2721;
+  background: transparent;
+  transition: 0.3s;
+  
+}
+.cp_iptxt2 .ef input[type='text']:focus {
+  border-bottom: 2px solid #446E72;
+  outline: none;
+}
+
+
+
+/* チェックリストお気に入り */
+.cp_ipcheck01 {
+  display: flex; /* テキストボックスとチェックボックスを横並びにする */
+  align-items: center; /* チェックボックスとラベルを縦方向に中央揃え */
+/*  margin: 6em 2em;*/
+}
+.cp_ipcheck01 input[type=checkbox] {
+  display: none;
+}
+/*通常時のラベルの設定*/
+.cp_ipcheck01 label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  text-overflow: ellipsis;/*テキストがエリアを超えたら'…'で省略*/
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+/*通常時のチェックボックスの設定*/
+.cp_ipcheck01 label::before {
+  position: absolute;
+  left: 0px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 2px solid #2B2721;
+}
+/* focus・hover・active・checked時のテキストの設定*/
+.cp_ipcheck01 label:focus,
+.cp_ipcheck01 label:hover,
+.cp_ipcheck01 label:active,
+.cp_ipcheck01 input:checked + label {
+  color: #446E72;
+}
+/* focus・hover・active時のチェックボックスの設定*/
+.cp_ipcheck01 label:focus::before,
+.cp_ipcheck01 label:hover::before,
+.cp_ipcheck01 label:active::before {
+  border-color: #446E72;
+}
+/* checked時のチェックボックスの設定*/
+.cp_ipcheck01 input:checked + label::before {
+  border-color: #446E72;
+  background: #446E72;
+}
+
+
+/* プルダウンリスト */
+.cp_ipselect01 {
+  position: relative;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  margin: 2em auto;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+}
+/*プルダウンの三角を設定*/
+.cp_ipselect01::before {
+  position: absolute;
+  right: 15px;
+  content: '';
+  width: 16px;
+  height: 8px;
+  background: #666666;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.cp_ipselect01 select {
+  width: 100%;
+  padding: 10px 45px 10px 10px;
+  color: #666666;
+  cursor: pointer;
+  text-overflow: ellipsis;/*テキストがオーバーしたら'...'で省略*/
+  z-index: 1;
+  /* 標準のスタイルを無効にする */
+  border: none;
+  appearance: none;
+  outline: none;
+  background: transparent;
+}
+
+
+/* テキストエリア */
+.textbox-1 {
+    width: 50%;
+    padding: 8px 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    color: #2B2721;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.textbox-1::placeholder {
+    color: #666666;
+}
+
+
+/* 画像 */
+.image-1 {
+  width: 50%; /* コンテナの幅を100%に設定（必要に応じて調整） */
+  display: flex; /* フレックスボックスを使用して配置 */
+  align-items: center; /* 縦方向を中央揃えにする */}
+  
+  
+/* チェックボックス */
+
+.checker-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: none;
+    width: 50%;
+
+/* フォームを中央に配置する */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.checker-2 label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+
+.checker-2 label::before,
+.checker-2 label:has(:checked)::after {
+    content: '';
+    border: #446E72;
+
+}
+
+.checker-2 label::before {
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    border: #446E72;
+    background-color: #E6E4E0;
+}
+
+.checker-2 label:has(:checked)::before {
+    background-color: #446E72;
+}
+
+.checker-2 label:has(:checked)::after {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    transform: rotate(45deg);
+    width: 4px;
+    height: 8px;
+    border: solid white;
+;
+    border-width: 0 2px 2px 0;
+}
+
+.checker-2 input {
+    display: none;
+}
+
+/* ボタン */
+.button-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin:0 auto;
+    padding: .9em 2em;
+    border: 1px solid #446E72;
+    border-radius: 5px;
+    background-color: #446E72;
+    color: white;
+    font-size: 1em;
+}
+
+.button-1:hover {
+    background-color: rgb(41, 67, 69);
+}
+
+/* form2 */
+/* 親要素に対してflexboxを使う */
+.img-wrapper {
+  display: flex;
+   width: 100%;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 10px;
+}
+
+/* ふきだし */
+.balloon5 {
+  display: flex;
+  width: 60%;
+  margin:auto;
+  overflow: hidden;
+  color: #2B2721;
+}
+
+
+.balloon5 .faceicon img{
+  width: 50%;
+  margin-right: auto;
+  height: auto;
+  border: solid 3px rgb(122, 171, 175);
+  border-radius: 50%;
+}
+
+.balloon5 .chatting {
+  width: 100%;
+}
+
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: rgb(122, 171, 175);
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid rgb(122, 171, 175);
+}
+
+.says p {
+  margin: 0;
+  padding: 0;
+}

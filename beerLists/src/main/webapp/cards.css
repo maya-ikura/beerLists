@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* ビールギャラリー全体のスタイル */
+.beer-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* カード間の隙間 */
+    justify-content: center; /* カードを中央に配置 */
+}
+
+/* 各ビールカードのスタイル */
+.beer-card {
+   display: flex; 
+    align-items: center; /* 中央揃え */
+    border: 1px solid #ddd; /* カードのボーダー */
+    border-radius: 8px; /* 角を丸くする */
+    overflow: hidden; /* 内容がカードの範囲を超えないようにする */
+    width: 300px; /* カードの幅を広くする */
+    height: 110px;
+    text-align: left; /* テキストを左揃え */
+    background-color: #fff; /* 背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+    transition: box-shadow 0.3s ease; /* シャドウのアニメーション */
+    position: relative; /* リボンのために relative に設定 */
+    text-decoration: none; /* リンクの下線を削除 */
+    color: inherit; /* テキストの色を継承 */
+    }
+.beer-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* ホバー時にシャドウを強調 */
+}
+
+
+/* リボンのスタイル */
+.ribbon {
+    position: absolute; /* 絶対位置で配置 */
+    top: 0; /* カードの下端からの距離 */
+    left: 0; /* カードの右端からの距離 */
+    background-color: #D89323; /* リボンの背景色 */
+    color: white; /* リボンの文字色 */
+    padding: 5px 8px; /* リボンのパディング */
+    font-size: 12px; /* リボンのフォントサイズ */
+    font-weight: bold; /* リボンのフォントウェイト */
+    border-radius: 4px; /* リボンの角を少し丸くする */
+    z-index: 1; /* リボンを前面に表示 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+}
+
+/* ビール画像のスタイル */
+.beer-image {
+    width: 110px; /* 画像の幅 */
+    height: 110px; /* 画像の高さ */
+    object-fit: cover; /* 画像がカードの範囲を超えないようにする */
+    margin-right: 10px; /* 画像とテキストの間の隙間 */
+    transition: opacity 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.beer-card:hover .beer-image {
+    opacity: 0.7; /* ホバー時に画像を薄くする */
+}
+
+
+/* ビール情報のスタイル */
+.beer-info {
+    padding: 10px; /* 内部のパディング */
+}
+
+.beer-name {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: #333; /* リンクの色 */
+    font-size: 16px; /* フォントサイズ */
+    font-weight: bold; /* フォントを太くする */
+}
+
+.store {
+    font-size: 12px; /* 店舗名のフォントサイズ */
+    color: #555; /* 店舗名の色 */
+}
+
+/* 初期表示時に16枚目以降のカードを非表示 */
+.beer-card.hidden {
+    display: none;
+}
+
+/* 「もっと見る」ボタンのスタイル */
+#show-more-button {
+    display: none; /* 初期状態で非表示 */
+    margin: 20px auto; /* 中央揃えとマージン */
+	padding: 0.5em 1em;
+	text-decoration: none;
+    color: #446E72;
+  	border:1px solid #446E72;
+  	background-color: white;
+    font-size: 16px; /* フォントサイズ */
+    transition: 0.3s;
+    }
+    
+#show-more-button:hover {
+  	color:white;
+  	background-color: #446E72;
+}
+
+
+    
+    
